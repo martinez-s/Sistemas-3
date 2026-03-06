@@ -1,0 +1,408 @@
+:root {
+    --color-primario: #f8c8d8;
+    --color-secundario: #d1495b;
+    --color-fondo: #fff5f7;
+    --color-texto: #2d1b1e;
+    --color-acento: #ff8fa3;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+.navbar-sc {
+    background-color: #fff;
+    border-bottom: 2px solid var(--color-primario);
+    box-shadow: 0 2px 12px rgba(209, 73, 91, 0.08);
+}
+
+.navbar-sc .navbar-brand {
+    color: var(--color-secundario) !important;
+    letter-spacing: 0.5px;
+    font-size: 1.1rem;
+}
+
+.navbar-sc .nav-link {
+    color: var(--color-texto) !important;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+.navbar-sc .nav-link:hover,
+.navbar-sc .nav-link.active {
+    color: var(--color-secundario) !important;
+}
+
+.hero-section {
+    position: relative;
+    background: linear-gradient(135deg, var(--color-primario) 0%, #fde8ee 40%, #ffe0ea 100%);
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '✦';
+    position: absolute;
+    font-size: 20rem;
+    color: rgba(209, 73, 91, 0.06);
+    top: -4rem;
+    right: -4rem;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.hero-eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    color: var(--color-secundario);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    font-weight: 900;
+    line-height: 0.9;
+    color: var(--color-texto);
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: #6b3a42;
+    margin-top: 1.5rem;
+}
+
+.btn-hero-primary {
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.btn-hero-primary:hover {
+    background-color: #b93448;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(209, 73, 91, 0.35);
+}
+
+.btn-hero-outline {
+    border: 2px solid var(--color-texto);
+    color: var(--color-texto);
+    background: transparent;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.btn-hero-outline:hover {
+    background: var(--color-texto);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.section-eyebrow {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: var(--color-secundario);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.section-title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--color-texto);
+}
+
+.page-header {
+    background: linear-gradient(180deg, var(--color-primario), var(--color-fondo));
+    border-bottom: 2px solid var(--color-primario);
+}
+
+.album-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--color-primario);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.album-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(209, 73, 91, 0.15);
+}
+
+.album-cover-placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--color-primario), #fde8ee);
+    overflow: hidden;
+}
+
+.album-cover-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.album-no-cover {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--color-primario), #fde8ee);
+}
+
+.album-title {
+    font-weight: 700;
+    color: var(--color-texto);
+    font-size: 0.95rem;
+}
+
+.album-meta {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.album-cover-lg {
+    aspect-ratio: 1;
+    max-width: 300px;
+    border-radius: 12px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, var(--color-primario), #fde8ee);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.album-card-detail {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid var(--color-primario);
+    overflow: hidden;
+}
+
+.tracklist {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #f0dde2;
+    overflow: hidden;
+}
+
+.track-item {
+    border-bottom: 1px solid #f9eaed;
+    transition: background 0.2s;
+}
+
+.track-item:last-child {
+    border-bottom: none;
+}
+
+.track-item:hover {
+    background: var(--color-fondo);
+}
+
+.track-num {
+    color: #bbb;
+    font-size: 0.85rem;
+    min-width: 1.8rem;
+    text-align: right;
+}
+
+.track-title {
+    font-weight: 500;
+    color: var(--color-texto);
+}
+
+.track-duration {
+    font-size: 0.85rem;
+}
+
+.tour-section {
+    background: linear-gradient(180deg, var(--color-fondo), #fff);
+}
+
+.tour-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid var(--color-primario);
+    transition: box-shadow 0.2s;
+}
+
+.tour-card:hover,
+.tour-card-full:hover {
+    box-shadow: 0 6px 20px rgba(209, 73, 91, 0.12);
+}
+
+.tour-card-full {
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid var(--color-primario);
+    transition: box-shadow 0.2s;
+}
+
+.tour-date-box {
+    background: var(--color-secundario);
+    color: white;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    min-width: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tour-month {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+.tour-day {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.tour-year {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.suscripcion-section {
+    background: linear-gradient(135deg, var(--color-primario), #fde8ee);
+}
+
+.form-control-sc {
+    border: 2px solid var(--color-primario);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+}
+
+.form-control-sc:focus {
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 3px rgba(209, 73, 91, 0.12);
+}
+
+.btn-sc-primary {
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s;
+}
+
+.btn-sc-primary:hover {
+    background-color: #b93448;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-sc-dark {
+    background-color: var(--color-texto);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+    transition: all 0.2s;
+}
+
+.btn-sc-dark:hover {
+    background-color: #1a0f11;
+    color: white;
+}
+
+.btn-outline-sc {
+    border: 2px solid var(--color-secundario);
+    color: var(--color-secundario);
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-outline-sc:hover {
+    background: var(--color-secundario);
+    color: white;
+}
+
+.btn-spotify {
+    background: #1DB954;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+    transition: all 0.2s;
+}
+
+.btn-spotify:hover {
+    background: #17a34a;
+    color: white;
+}
+
+.footer-sc {
+    background: var(--color-texto);
+    color: #c0a0a5;
+}
+
+.footer-sc .fw-bold {
+    color: var(--color-acento);
+    letter-spacing: 2px;
+}
+
+.footer-link {
+    color: #c0a0a5;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: var(--color-acento);
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .tour-card-full {
+        flex-wrap: wrap;
+    }
+}
+
+body {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
