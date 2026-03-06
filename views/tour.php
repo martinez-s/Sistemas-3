@@ -63,7 +63,6 @@ $fechas = $ctrl->listarFechas();
                     <div class="col-12 fecha-item" data-estado="<?= $f['estadoTicket'] ?>">
                         <div class="tour-card-full d-flex align-items-center gap-4 p-4">
 
-                            <!-- Caja de fecha -->
                             <div class="tour-date-box text-center flex-shrink-0">
                                 <span class="tour-month">
                                     <?= strtoupper(date('M', strtotime($f['fechaHora']))) ?>

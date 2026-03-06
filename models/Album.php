@@ -1,5 +1,4 @@
 <?php
-// Archivo: models/Album.php
 
 class Album
 {
